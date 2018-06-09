@@ -1,0 +1,45 @@
+.micropub-client-editor {
+  box-sizing: border-box;
+}
+
+.micropub-client-editor__property {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.micropub-client-editor__label {
+  display: block;
+  margin-bottom: 0.2em;
+}
+.micropub-client-editor__label[for] {
+  cursor: pointer;
+}
+
+.micropub-client-editor__input {
+  display: block;
+  width: 100%;
+}
+
+.micropub-client-editor__datetime__date,
+.micropub-client-editor__datetime__time {
+  width: 49%;
+  width: calc(50% - 0.1em);
+  float: left;
+}
+.micropub-client-editor__datetime__date {
+  margin-right: 2%;
+  margin-right: calc(0.1em * 2);
+}
+
+.micropub-client-editor__file-previews {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.micropub-client-editor__file-preview {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
