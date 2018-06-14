@@ -398,7 +398,7 @@ MicropubClientEditor.defaultProps = {
   buttonComponent: props => <button {...props} />,
   textareaComponent: props => <textarea {...props} />,
   selectComponent: props => <select {...props} />,
-  checkboxComponent: props => <checkbox {...props} />,
+  checkboxComponent: props => <input type="checkbox" {...props} />,
   imgComponent: props => <img {...props} />,
   videoComponent: props => <video {...props} />,
   audioComponent: props => <audio {...props} />,
