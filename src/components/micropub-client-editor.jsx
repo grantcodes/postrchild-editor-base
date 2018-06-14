@@ -319,8 +319,7 @@ class MicropubClientEditor extends Component {
           <Property name="mp-syndicate-to" label="Syndication">
             {this.props.syndication.map(service => {
               let checked = false
-              let uid = service.uid
-              let name = service.name
+              let { name, uid } = service
               if (service.service && service.service.name) {
                 name = service.service.name
               }
@@ -339,10 +338,7 @@ class MicropubClientEditor extends Component {
                       let selectedServices = this.state['mp-syndicate-to'] || []
                       const existingIndex = selectedServices.indexOf(uid)
                       if (existingIndex > -1) {
-                        selectedServices = selectedServices.splice(
-                          existingIndex,
-                          1
-                        )
+                        selectedServices.splice(existingIndex, 1)
                       } else {
                         selectedServices.push(uid)
                       }
