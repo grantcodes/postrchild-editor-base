@@ -19,6 +19,24 @@ class MicropubClientEditor extends Component {
     this.changeMf2 = this.changeMf2.bind(this)
   }
 
+  componentWillReceiveProps(newProps) {
+    const properties = this.state
+    if (newProps.properties) {
+      let update = {}
+      Object.keys(newProps.properties).forEach(key => {
+        const newValue = newProps.properties[key]
+        if (newValue && Array.isArray(newValue)) {
+          if (!this.state[key] || this.state[key][0] != newValue[0]) {
+            update[key] = newValue
+          }
+        }
+      })
+      if (Object.keys(update).length) {
+        this.setState(update)
+      }
+    }
+  }
+
   renderProperty(props) {
     if (this.props.shownProperties.indexOf(props.name) > -1) {
       return (
