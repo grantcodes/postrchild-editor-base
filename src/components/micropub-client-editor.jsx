@@ -11,7 +11,6 @@ class MicropubClientEditor extends Component {
   constructor(props) {
     super(props)
     this.state = { ...props.properties }
-    console.log('Editor props', props)
 
     this.renderProperty = this.renderProperty.bind(this)
     this.renderFilePreview = this.renderFilePreview.bind(this)
@@ -112,14 +111,14 @@ class MicropubClientEditor extends Component {
 
     return (
       <Div>
-        <Property name="published" label="Published">
+        {/* <Property name="published" label="Published">
           <DateField
             inputComponent={Input}
             onChange={date => {
               console.log('Changed date', date)
             }}
           />
-        </Property>
+        </Property> */}
 
         <Property name="name" label="Name">
           <Input

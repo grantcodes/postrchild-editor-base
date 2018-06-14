@@ -1,6 +1,6 @@
 {
   "name": "micropub-client-editor",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A mf2 editor react component to help with creating micropub clients",
   "main": "build/index.js",
   "scripts": {
