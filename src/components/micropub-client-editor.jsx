@@ -65,7 +65,7 @@ class MicropubClientEditor extends Component {
 
   changeMf2() {
     let mf2 = {
-      type: 'h-entry',
+      type: ['h-entry'],
       properties: {},
     }
     Object.keys(this.state).forEach(key => {
