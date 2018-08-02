@@ -317,7 +317,7 @@ class MicropubClientEditor extends Component {
             onChange={this.handleChange('visibility')}
           >
             <option value="visible">Visible</option>
-            <option value="hidden">Hidden</option>
+            <option value="private">Private</option>
             <option value="unlisted">Unlisted</option>
           </Select>
         </Property>
