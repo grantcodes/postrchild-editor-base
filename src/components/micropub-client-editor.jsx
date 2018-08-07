@@ -168,7 +168,7 @@ class MicropubClientEditor extends Component {
               id="mf2_content"
               value={contentValue}
               onChange={value =>
-                this.setState({ content: [value] }, this.changeMf2)
+                this.setState({ content: [{ html: value }] }, this.changeMf2)
               }
             />
           ) : (
