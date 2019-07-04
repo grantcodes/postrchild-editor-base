@@ -1,16 +1,3 @@
 {
-  "presets": [
-    "react",
-    [
-      "env",
-      {
-        "targets": {
-          "browsers": "last 2 version"
-        }
-      }
-    ]
-  ],
-  "plugins": [
-    "transform-object-rest-spread"
-  ]
+  "presets": ["@babel/preset-env", "@babel/preset-react"]
 }

@@ -3,7 +3,7 @@ const webpack = require('webpack')
 var options = {
   mode: 'production',
   target: 'web',
-  entry: __dirname + '/index.js',
+  entry: __dirname + '/src/index.js',
   output: {
     path: __dirname + '/build',
     filename: 'index.js',

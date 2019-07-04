@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import PropTypes from 'prop-types'
 
 const dateToDateString = date => {
@@ -15,59 +15,51 @@ const dateToTimeString = date => {
   return hours + ':' + minutes
 }
 
-class DateField extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      date: props.date || new Date(),
-    }
-    this.handleDateChange = this.handleDateChange.bind(this)
-    this.handleTimeChange = this.handleTimeChange.bind(this)
-  }
+const DateField = ({
+  date: dateProp = new Date(),
+  inputComponent: Input,
+  onChange,
+}) => {
+  const [date, setDate] = useState(dateProp)
 
-  handleDateChange(e) {
+  const handleDateChange = e => {
     const val = e.target.valueAsDate
-    const { date } = this.state
     const dateString = dateToDateString(val)
     const timeString = dateToTimeString(date)
     const newDate = new Date(dateString + 'T' + timeString + ':00')
-    this.setState({ date: newDate })
-    this.props.onChange(newDate)
+    setDate(newDate)
+    onChange(newDate)
   }
 
-  handleTimeChange(e) {
+  const handleTimeChange = e => {
     const val = e.target.valueAsDate
     const { date } = this.state
     const dateString = dateToDateString(date)
     const timeString = dateToTimeString(val)
     const newDate = new Date(dateString + 'T' + timeString + ':00')
-    this.setState({ date: newDate })
-    this.props.onChange(newDate)
+    setDate(newDate)
+    onChange(newDate)
   }
 
-  render() {
-    const { date } = this.state
-    const { inputComponent: Input } = this.props
-    const dateValue = dateToDateString(date)
-    const timeValue = dateToTimeString(date)
-    console.log('timeValue', timeValue)
-    return (
-      <Fragment>
-        <Input
-          className="micropub-client-editor__datetime__date"
-          type="date"
-          value={dateValue}
-          onChange={this.handleDateChange}
-        />
-        <Input
-          className="micropub-client-editor__datetime__time"
-          type="time"
-          value={timeValue}
-          onChange={this.handleTimeChange}
-        />
-      </Fragment>
-    )
-  }
+  const dateValue = dateToDateString(date)
+  const timeValue = dateToTimeString(date)
+
+  return (
+    <Fragment>
+      <Input
+        className="micropub-client-editor__datetime__date"
+        type="date"
+        value={dateValue}
+        onChange={handleDateChange}
+      />
+      <Input
+        className="micropub-client-editor__datetime__time"
+        type="time"
+        value={timeValue}
+        onChange={handleTimeChange}
+      />
+    </Fragment>
+  )
 }
 
 DateField.PropTypes = {
