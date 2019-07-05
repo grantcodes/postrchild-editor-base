@@ -1,4 +1,4 @@
-#PostrChild Editor Base
+# PostrChild Editor Base
 
 An extendable set of basic react components to help make developing [micropub](https://indieweb.org/micropub) clients a breeze.
 
