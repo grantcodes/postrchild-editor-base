@@ -1,7 +1,7 @@
 {
-  "name": "micropub-client-editor",
+  "name": "@postrchild/editor-base",
   "version": "2.0.0",
-  "description": "A mf2 editor react component to help with creating micropub clients",
+  "description": "A set of base react components to help creating mf2 properties. Perfect for micropub clients!",
   "main": "build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,7 +11,16 @@
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages"
   },
-  "author": "grant.codes",
+  "author": "Grant Richmond <mail@grant.codes> (https://grant.codes)",
+  "homepage": "https://grantcodes.github.io/postrchild-editor-base",
+  "bugs": "https://github.com/grantcodes/postrchild-editor-base/issues",
+  "keywords": [
+    "indieweb",
+    "microformats",
+    "micropub",
+    "react",
+    "editor"
+  ],
   "license": "ISC",
   "dependencies": {
     "prop-types": "^15.7.2",

@@ -42,7 +42,7 @@ const basicNote = (component, name) => ({
     A \`${name}\` field. Should be used as a child of the \`ComposableForm\` component.
 
     ~~~js
-    import { ${component} } from '@postrchild/editor'
+    import { ${component} } from '@postrchild/editor-base'
     ~~~
 
     ~~~jsx
@@ -59,7 +59,7 @@ const fileNote = (component, name) => ({
     Returns an array of \`File\` objects.
 
     ~~~js
-    import { ${component} } from '@postrchild/editor'
+    import { ${component} } from '@postrchild/editor-base'
     ~~~
 
     ~~~jsx
@@ -117,7 +117,7 @@ story.add(
     Rich text mode is enabled via the \`richContent\` prop.
 
     ~~~js
-    import { Content } from '@postrchild/editor'
+    import { Content } from '@postrchild/editor-base'
     ~~~
 
     ~~~jsx
@@ -236,7 +236,7 @@ story.add(
     Syndication providers are passed in using the \`syndication\` prop.
 
     ~~~js
-    import { MpSyndicateTo } from '@postrchild/editor'
+    import { MpSyndicateTo } from '@postrchild/editor-base'
     ~~~
 
     ~~~jsx

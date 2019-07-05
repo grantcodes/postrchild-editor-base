@@ -54,7 +54,7 @@ composableForm.add(
 
       ~~~jsx
       import React, { useState } from 'react'
-      import { ComposableForm , InReplyTo, Content } from '@postrchild/editor'
+      import { ComposableForm , InReplyTo, Content } from '@postrchild/editor-base'
 
       const MyForm = () => {
         const [properties, setProperties] = useState({
@@ -109,7 +109,7 @@ composableForm.add(
 
       ~~~jsx
       import React, { useState } from 'react'
-      import { ComposableForm, MpSlug, Name, Featured, Content, PostStatus, Visibility } from '@postrchild/editor'
+      import { ComposableForm, MpSlug, Name, Featured, Content, PostStatus, Visibility } from '@postrchild/editor-base'
 
       const MyForm = () => {
         const [properties, setProperties] = useState({
@@ -164,7 +164,7 @@ composableForm.add(
 
       ~~~jsx
       import React, { useState } from 'react'
-      import { ComposableForm, Name, Photo } from '@postrchild/editor'
+      import { ComposableForm, Name, Photo } from '@postrchild/editor-base'
 
       const MyForm = () => {
         const [properties, setProperties] = useState({

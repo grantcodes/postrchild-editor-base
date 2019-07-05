@@ -95,7 +95,7 @@ customization.add(
 
       ~~~jsx
       import React, { useState } from 'react'
-      import { AutoForm } from '@postrchild/editor'
+      import { AutoForm } from '@postrchild/editor-base'
       import { Box, Label, Input, Button } from 'some-framework'
 
       const MyForm = () => {
@@ -137,7 +137,7 @@ customization.add('Custom Property Fields', () => <CustomPropertyDemo />, {
 
       ~~~jsx
       import React, { useState } from 'react'
-      import { ComposableForm, Name } from '@postrchild/editor'
+      import { ComposableForm, Name } from '@postrchild/editor-base'
 
       // Custom property field
       const MyProperty = ({ value, onChange, ...props }) => {

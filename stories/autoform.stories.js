@@ -40,7 +40,7 @@ autoForm.add(
 
       ~~~jsx
       import React, { useState } from 'react'
-      import { AutoForm } from '@postrchild/editor'
+      import { AutoForm } from '@postrchild/editor-base'
 
       const MyForm = () => {
         const [properties, setProperties] = useState({
@@ -87,7 +87,7 @@ autoForm.add(
 
       ~~~jsx
       import React, { useState } from 'react'
-      import { AutoForm } from '@postrchild/editor'
+      import { AutoForm } from '@postrchild/editor-base'
 
       const MyForm = () => {
         const [properties, setProperties] = useState({
@@ -132,7 +132,7 @@ autoForm.add(
 
       ~~~jsx
       import React, { useState } from 'react'
-      import { AutoForm } from '@postrchild/editor'
+      import { AutoForm } from '@postrchild/editor-base'
 
       const MyForm = () => {
         const [properties, setProperties] = useState({
