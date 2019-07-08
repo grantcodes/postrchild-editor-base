@@ -5,7 +5,11 @@ import { components as defaultComponents } from '../../default-components'
 
 const Summary = ({ value, onChange, textareaComponent: Input, ...props }) => (
   <Property label="Summary" {...props}>
-    <Input id={`mf2_${props.property}`} value={value} onChange={onChange} />
+    <Input
+      id={`mf2_${props.property}`}
+      value={value}
+      onChange={e => onChange([e.target.value])}
+    />
   </Property>
 )
 
