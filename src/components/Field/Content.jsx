@@ -21,8 +21,6 @@ const Content = ({
     contentValue = value[0].value || value[0]
   }
 
-  console.log({ contentValue, richContent, ReactQuill })
-
   return (
     <Property label="Content" {...props}>
       {richContent ? (

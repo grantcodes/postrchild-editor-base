@@ -1,6 +1,6 @@
 {
   "name": "@postrchild/editor-base",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A set of base react components to help creating mf2 properties. Perfect for micropub clients!",
   "main": "build/index.js",
   "scripts": {
