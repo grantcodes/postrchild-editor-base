@@ -7,7 +7,7 @@ var options = {
   output: {
     path: __dirname + '/build',
     filename: 'index.js',
-    library: 'Mf2Editor',
+    library: 'PostrchildEditorBase',
     libraryTarget: 'umd',
   },
   module: {
