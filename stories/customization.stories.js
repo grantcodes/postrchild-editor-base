@@ -116,6 +116,35 @@ customization.add(
         )
       }
       ~~~
+
+      The \`propertyComponent\` component is a wrapper component that is applied to every property field.
+      The default component adds wrapping divs with class names as well as adding the label.
+      It is rare that this component should need overwritten.
+
+      ~~~jsx
+      const Property = ({
+        labelComponent: Label,
+        divComponent: Div,
+        children,
+        property,
+        label,
+      }) => (
+        <Div
+          className={
+            'micropub-client-editor__property micropub-client-editor__property--' +
+            property
+          }
+        >
+          <Label
+            className="micropub-client-editor__label"
+            htmlFor={'mf2_' + property}
+          >
+            {label}
+          </Label>
+          {children}
+        </Div>
+      )
+      ~~~
     `,
     },
   }

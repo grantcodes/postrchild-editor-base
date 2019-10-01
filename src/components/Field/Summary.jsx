@@ -1,9 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Property from '../Property'
 import { components as defaultComponents } from '../../default-components'
 
-const Summary = ({ value, onChange, textareaComponent: Input, ...props }) => (
+const Summary = ({
+  value,
+  onChange,
+  textareaComponent: Input,
+  propertyComponent: Property,
+  ...props
+}) => (
   <Property label="Summary" {...props}>
     <Input
       id={`mf2_${props.property}`}

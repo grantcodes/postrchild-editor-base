@@ -1,9 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Property from '../Property'
 import { components as defaultComponents } from '../../default-components'
 
-const Category = ({ value, onChange, inputComponent: Input, ...props }) => (
+const Category = ({
+  value,
+  onChange,
+  inputComponent: Input,
+  propertyComponent: Property,
+  ...props
+}) => (
   <Property label="Tags (comma serparated)" {...props}>
     <Input
       id={`mf2_${props.property}`}

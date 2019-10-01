@@ -1,9 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Property from '../Property'
 import { components as defaultComponents } from '../../default-components'
 
-const Location = ({ value, onChange, buttonComponent: Button, ...props }) => {
+const Location = ({
+  value,
+  onChange,
+  buttonComponent: Button,
+  propertyComponent: Property,
+  ...props
+}) => {
   if (
     typeof window === 'undefined' ||
     !window.navigator ||
@@ -22,9 +27,7 @@ const Location = ({ value, onChange, buttonComponent: Button, ...props }) => {
           } else {
             window.navigator.geolocation.getCurrentPosition(pos => {
               if (pos && pos.coords) {
-                const location = `geo:${pos.coords.latitude},${
-                  pos.coords.longitude
-                }`
+                const location = `geo:${pos.coords.latitude},${pos.coords.longitude}`
                 onChange([location])
               }
             })

@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Property from '../Property'
 import FilePreview from '../FilePreview'
 import { components as defaultComponents } from '../../default-components'
 
@@ -12,6 +11,7 @@ const BasicField = ({
   onChange,
   type,
   inputComponent: Input,
+  propertyComponent: Property,
   ...props
 }) => {
   return (

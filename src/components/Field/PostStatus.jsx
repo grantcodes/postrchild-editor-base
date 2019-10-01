@@ -1,8 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Property from '../Property'
 
-const PostStatus = ({ value, onChange, selectComponent: Select, ...props }) => (
+const PostStatus = ({
+  value,
+  onChange,
+  selectComponent: Select,
+  propertyComponent: Property,
+  ...props
+}) => (
   <Property label="Post Status" {...props}>
     <Select
       id={`mf2_${props.property}`}

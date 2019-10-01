@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import ReactQuill from 'react-quill'
-import Property from '../Property'
 import { components as defaultComponents } from '../../default-components'
 import 'react-quill/dist/quill.snow.css'
 
@@ -10,6 +9,7 @@ const Content = ({
   onChange,
   richContent,
   textareaComponent: Textarea,
+  propertyComponent: Property,
   ...props
 }) => {
   // Get the appropriate content value from nested object

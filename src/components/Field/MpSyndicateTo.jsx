@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Property from '../Property'
 import { components as defaultComponents } from '../../default-components'
 
 const MpSyndicateTo = ({
@@ -9,6 +8,7 @@ const MpSyndicateTo = ({
   syndication,
   inputComponent: Input,
   checkboxComponent: Checkbox,
+  propertyComponent: Property,
   ...props
 }) => {
   const Label = props.labelComponent

@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Property from './components/Property'
 
 export const components = {
   divComponent: props => <div {...props} />,
@@ -12,6 +13,7 @@ export const components = {
   imgComponent: props => <img {...props} />,
   videoComponent: props => <video {...props} />,
   audioComponent: props => <audio {...props} />,
+  propertyComponent: Property,
 }
 
 export const propTypes = {
@@ -25,4 +27,5 @@ export const propTypes = {
   imgComponent: PropTypes.func.isRequired,
   videoComponent: PropTypes.func.isRequired,
   audioComponent: PropTypes.func.isRequired,
+  propertyComponent: PropTypes.func.isRequired,
 }

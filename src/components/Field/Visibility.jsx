@@ -1,9 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Property from '../Property'
 import { components as defaultComponents } from '../../default-components'
 
-const Visibility = ({ value, onChange, selectComponent: Select, ...props }) => (
+const Visibility = ({
+  value,
+  onChange,
+  selectComponent: Select,
+  propertyComponent: Property,
+  ...props
+}) => (
   <Property label="Visibility" {...props}>
     <Select
       id={`mf2_${props.property}`}
