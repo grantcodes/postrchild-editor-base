@@ -41,7 +41,7 @@ const Location = ({
 }
 
 Location.defaultProps = {
-  property: 'Location',
+  property: 'location',
   ...defaultComponents,
 }
 
