@@ -1,12 +1,10 @@
 const webpack = require('webpack')
 
-var options = {
+let options = () => ({
   mode: 'production',
-  target: 'web',
   entry: __dirname + '/src/index.js',
   output: {
     path: __dirname + '/build',
-    filename: 'index.js',
     library: 'PostrchildEditorBase',
     libraryTarget: 'umd',
   },
@@ -14,7 +12,7 @@ var options = {
     rules: [
       {
         test: /\.css$/,
-        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
+        use: [{ loader: 'isomorphic-style-loader' }, { loader: 'css-loader' }],
       },
       {
         test: /\.(js|jsx)$/,
@@ -27,8 +25,16 @@ var options = {
     extensions: ['.jsx', '.js', '.css'],
   },
   optimization: {
-    minimize: false,
+    minimize: true,
   },
-}
+})
 
-module.exports = options
+let clientConfig = options()
+clientConfig.target = 'web'
+clientConfig.output.filename = 'web.js'
+
+let serverConfig = options()
+serverConfig.target = 'node'
+serverConfig.output.filename = 'index.js'
+
+module.exports = [clientConfig, serverConfig]
