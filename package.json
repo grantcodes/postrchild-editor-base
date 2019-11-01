@@ -1,11 +1,8 @@
 {
-  "name": "postrchild-editor-base",
-  "version": "2.3.0-beta.2",
+  "name": "@postrchild/editor-base",
+  "version": "2.3.0",
   "description": "A set of base react components to help creating mf2 properties. Perfect for micropub clients!",
-  "main": "build/index.js",
-  "browser": {
-    "build/index.js": "build/web.js"
-  },
+  "main": "build/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.js --progress",
@@ -27,9 +24,11 @@
   "license": "ISC",
   "dependencies": {
     "prop-types": "^15.7.2",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
     "react-quill": "^1.3.3"
+  },
+  "peerDependencies": {
+    "react": ">= 16.8.0",
+    "react-dom": ">= 16.8.0"
   },
   "prettier": {
     "semi": false,

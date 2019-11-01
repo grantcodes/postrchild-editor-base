@@ -3,6 +3,6 @@
 .git
 src
 webpack.config.js
-index.js
+/index.js
 .storybook
 stories

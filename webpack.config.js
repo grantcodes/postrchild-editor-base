@@ -5,9 +5,10 @@ let options = () => ({
   entry: __dirname + '/src/index.js',
   output: {
     path: __dirname + '/build',
-    library: 'PostrchildEditorBase',
-    libraryTarget: 'umd',
+    libraryTarget: 'commonjs',
+    filename: 'main.js',
   },
+  target: 'node',
   module: {
     rules: [
       {
@@ -29,14 +30,4 @@ let options = () => ({
   },
 })
 
-let clientConfig = options()
-clientConfig.target = 'web'
-clientConfig.output.filename = 'web.js'
-
-let serverConfig = options()
-serverConfig.target = 'node'
-delete serverConfig.output.library
-serverConfig.output.libraryTarget = 'commonjs'
-serverConfig.output.filename = 'index.js'
-
-module.exports = [clientConfig, serverConfig]
+module.exports = options
