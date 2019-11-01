@@ -35,6 +35,8 @@ clientConfig.output.filename = 'web.js'
 
 let serverConfig = options()
 serverConfig.target = 'node'
+delete serverConfig.output.library
+serverConfig.output.libraryTarget = 'commonjs'
 serverConfig.output.filename = 'index.js'
 
 module.exports = [clientConfig, serverConfig]
